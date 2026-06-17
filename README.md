@@ -75,3 +75,4 @@ def home_view(request):
 templates/index.html:
 <h1 class="font1 text-6xl title-fadein">Awesome Photos & Captions</h1>
 ->
+<h1 class="font1 text-6xl title-fadein">{{ title }}</h1>
