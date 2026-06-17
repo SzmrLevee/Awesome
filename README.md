@@ -53,3 +53,25 @@ a_posts/views.py:
 def home_view(request):
     return render(request, 'index.html')
 
+a_core/urls.py:
+
+from a_posts.views import *
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home_view)
+]
+
+from a_posts.views import *
+AND 
+path('', home_view)
+
+a_posts/views.py:
+
+def home_view(request):
+    title = 'Welcome to Django'
+    return render(request, 'index.html', {'title': title})
+
+templates/index.html:
+<h1 class="font1 text-6xl title-fadein">Awesome Photos & Captions</h1>
+->
