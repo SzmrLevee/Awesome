@@ -236,6 +236,3 @@ Módosítás:
 ```
 
 Így a cím dinamikusan a Django View-ból érkezik.
-
-```
-```
