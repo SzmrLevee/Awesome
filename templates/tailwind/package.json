@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind": "tailwind build -i tailwind.css -o ../../static/style.css --watch"
+    "tailwind": "tailwind build -i tailwind.css -o ../../static/style.css --watch",
+    "minify": "cleancss ../../static/style.css -o ../../static/style.min.css"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "clean-css-cli": "^5.6.3"
   }
 }
