@@ -102,8 +102,8 @@
             </a>
         </mobileicon>
     </div>    
-    <nav x-show="mobilenavOpen" x-cloak class="md:!block bg-gray-800 h-screen w-screen md:h-auto md:w-auto">
-        <ul class="flex items-center gap-6 navitems">
+    <nav x-show="mobilenavOpen" x-cloak class="md:!block bg-gray-800 h-screen w-screen md:h-auto md:w-auto -mt-20 md:mt-0 absolute md:relative z-[-1]">
+        <ul class="flex items-center gap-6 navitems flex-col md:flex-row gap-8 md:gap-0 justify-center h-full -translate-y-10 md:translate-y-0">
             <li><a href="/">Home</a></li>
             <li><a href="">Create Post</a></li>
             <li x-data="{ dropdownOpen: false }" class="relative">
