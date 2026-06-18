@@ -347,3 +347,14 @@ python manage.py runserver
 ```
 
 Ezután HTML, CSS vagy Python fájl mentésekor a böngésző automatikusan frissül.
+
+minimized css:
+node --verison
+tailwind mappa létrehozása
+Lépjünk bele
+npm init -y
+npm install tailwindcss
+tailwind.css fájl létrehozása mappán belül
+css átvitele html ből
+npm install -D tailwindcss@3 postcss autoprefixer
+npx tailwindcss init -p
