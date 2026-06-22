@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 def home_view(request):
     #print(request.META)
@@ -7,4 +8,5 @@ def home_view(request):
     #title = 'Awesome Photos & Captions'
     #return render(request, 'index.html', {'title': title})
     
-    return render(request, 'includes/a_posts/home.html')
+    posts = Post.objects.all()
+    return render(request, 'a_posts/home.html', {'posts':posts})
