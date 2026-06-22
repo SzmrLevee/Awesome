@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.forms import ModelForm
+from django import forms
 
 def home_view(request):
     #print(request.META)
@@ -18,6 +19,9 @@ class PostCreateForm(ModelForm):
         fields = '__all__'
         labels = {
             'body':'Caption',
+        }
+        widgets = {
+            'body': forms.Textarea(attrs={'row': 3, 'placeholder': 'Add a caption ...', 'class': 'font1 text-4xl'}),
         }
 
 def post_create_view(request):
