@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.forms import ModelForm
 from django import forms
@@ -26,4 +26,11 @@ class PostCreateForm(ModelForm):
 
 def post_create_view(request):
     form=PostCreateForm()
+    
+    if request.method=='POST':
+        form=PostCreateForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    
     return render(request, 'a_posts/post_create.html', {'form':form})
