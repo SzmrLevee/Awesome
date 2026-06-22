@@ -62,7 +62,17 @@ CTRL + C
 
 ---
 
-## 6. Adatbázis migrációk futtatása
+## 6.1 Adatbázis migrációk építése
+
+```bash
+python manage.py makemigrations
+```
+
+Ezt csak akkor kell futtatni, hogyha már van a models - ben valami
+
+---
+
+## 6.2 Adatbázis migrációk futtatása
 
 ```bash
 python manage.py migrate
