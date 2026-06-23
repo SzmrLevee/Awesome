@@ -11,8 +11,8 @@
       <form method="POST" class="flex items-center gap-2">
         {% csrf_token %}
         <button type="submit" class="button">Confirm</button>
-        <a class="button secondaryAction" href="{% url 'home' %}">Go Back</a>
-    </form>
+        <a class="button secondaryAction" href="{{ request.META.HTTP_REFERER }}">Go Back</a>
+      </form>
     </div>
   </div>
 </div>
