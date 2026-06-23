@@ -54,6 +54,12 @@ A projekt gyökerében:
 python manage.py runserver
 ```
 
+Debug mód nélkül:
+
+```bash
+python manage.py runserver --insecure
+```
+
 ### 2. Terminál
 
 A Tailwind mappában:
