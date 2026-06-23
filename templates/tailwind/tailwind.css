@@ -64,6 +64,24 @@ h2 {
 .font1 {
   font-family: var(--font1);
 }
+.post-edit-card {
+  padding: 1rem;
+}
+.post-edit-image {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+  object-fit: cover;
+}
+.post-edit-textarea {
+  display: block;
+  width: 100%;
+  min-height: 6rem;
+  background-color: rgb(219 234 254);
+  padding: 0.75rem 1rem;
+  color: rgb(31 41 55);
+  border: 0;
+}
 .hoverlist > * {
   @apply hover:bg-gray-100 rounded-md transition duration-150;
 }
