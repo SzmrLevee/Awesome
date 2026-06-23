@@ -6,7 +6,7 @@
     </div>
   </div>
   <figure>
-    <a href=""
+    <a href="{% url 'post' post.id %}"
       ><img
         class="w-full"
         src="{{post.image}}"
@@ -35,7 +35,7 @@
       >
     </div>
     <div class="flex items-center justify-between text-sm px-2">
-      <a class="font-bold hover:underline" href=""
+      <a class="font-bold hover:underline" href="{% url 'post' post.id %}"
         >Comments<span class="font-light text-gray-500 ml-2">3</span></a
       >
       <div class="flex items-center gap-4 [&>a:hover]:underline">

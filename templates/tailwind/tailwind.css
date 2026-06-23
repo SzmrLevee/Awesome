@@ -82,6 +82,38 @@ h2 {
   color: rgb(31 41 55);
   border: 0;
 }
+.post-comment-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+.post-comment-form input,
+.replyform input {
+  flex: 1;
+  min-width: 0;
+  border-radius: 0.5rem;
+  background-color: rgb(219 234 254);
+  padding: 0.85rem 1rem;
+  color: rgb(31 41 55);
+}
+.post-comment-form .button {
+  min-height: 2.75rem;
+}
+.tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: rgb(55 65 81);
+  background-color: rgb(229 231 235);
+}
+.tab.selected {
+  color: white;
+  background-color: rgb(31 41 55);
+}
 .hoverlist > * {
   @apply hover:bg-gray-100 rounded-md transition duration-150;
 }

@@ -59,7 +59,7 @@ def post_edit_view(request, pk):
     
     if request.method == "POST":
         form = PostEditForm(request.POST, instance=post)
-        if(form.is_valid):
+        if form.is_valid():
             form.save()
             messages.success(request, 'Post updated')
             return redirect('home')
@@ -69,3 +69,7 @@ def post_edit_view(request, pk):
         'form' : form
     }
     return render(request, 'a_posts/post_edit.html', context)
+
+def post_page_view(request, pk):
+    post = Post.objects.get(id=pk)
+    return render(request, 'a_posts/post_page.html', {'post' : post})
