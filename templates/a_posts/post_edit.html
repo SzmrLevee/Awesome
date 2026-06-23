@@ -12,7 +12,7 @@
     <div class="pb-2">
         <form method='POST'>
             {% csrf_token %}
-            <textarea name="body" rows=3 class="post-edit-textarea font1 text-4xl rounded-lg">{{ post.body }}</textarea>
+            {{ form }}
             <div class="pt-4">
                 <button type="submit" class="button">Submit</button>
                 <a class="button secondaryAction ml-1" href="{{ request.META.HTTP_REFERER }}">Go Back</a>
