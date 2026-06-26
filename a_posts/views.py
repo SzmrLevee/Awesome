@@ -5,19 +5,28 @@ from bs4 import BeautifulSoup
 import requests
 from django.contrib import messages
 
-def home_view(request):
+def home_view(request, tag=None):
     #print(request.META)
     #print(request.method)
     
     #title = 'Awesome Photos & Captions'
     #return render(request, 'index.html', {'title': title})
     
-    posts = Post.objects.all()
-    return render(request, 'a_posts/home.html', {'posts':posts})
-
-def category_view(request, tag):
-    posts = Post.objects.filter(tags__slug=tag)
-    return render(request, 'a_posts/home.html', {'posts':posts})
+    if tag:
+        posts = Post.objects.filter(tags__slug=tag)
+        tag = get_object_or_404(Tag, slug = tag)
+    else:
+        posts = Post.objects.all()
+    
+    categories = Tag.objects.all()
+    
+    context = {
+        'posts': posts,
+        'categories': categories,
+        'tag' : tag
+    }
+    
+    return render(request, 'a_posts/home.html', context)
 
 def post_create_view(request):
     form=PostCreateForm()
