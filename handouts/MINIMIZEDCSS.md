@@ -103,9 +103,6 @@ venv/
 __pycache__/
 *.pyc
 
-# Django
-db.sqlite3
-
 # Node
 node_modules/
 

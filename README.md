@@ -1,96 +1,51 @@
 # Awesome
 
-Django + Tailwind CSS gyakorló projekt.
+Django + Tailwind CSS gyakorló projekt Docker támogatással.
 
-## Projekt klónozása
+## Indítás Dockerrel
 
-```bash
-git clone <repository-url>
-cd awesome
-```
-
-## Virtuális környezet aktiválása
-
-### Windows PowerShell
+Windows PowerShell:
 
 ```powershell
-.\venv\Scripts\Activate.ps1
+.\start.ps1
 ```
 
-### Linux / macOS
+Linux / macOS:
 
 ```bash
-source venv/bin/activate
+./start.sh
 ```
 
-## Python függőségek telepítése
+Az első indítás során automatikusan:
 
-```bash
-pip install django
-pip install django-browser-reload
-```
+* létrejön az `a_core/.env` fájl, ha hiányzik
+* lefutnak a migrációk
+* létrejön vagy frissül a Django `Site`
+* létrejön az `admin` superuser
+* elindul az app, a PostgreSQL, a Redis, a Celery worker, a Celery Beat és a Flower
 
-## Node modulok telepítése
+## Elérhetőségek
 
-```bash
-cd templates/tailwind
-npm install
-```
+| Szolgáltatás | URL                     |
+| ------------ | ----------------------- |
+| Django       | http://localhost:8000   |
+| Admin        | http://localhost:8000/admin |
+| Flower       | http://localhost:5555   |
 
-Ez telepíti a projektben használt csomagokat:
-
-* Tailwind CSS
-* PostCSS
-* Autoprefixer
-* Clean CSS CLI
-
-## Projekt indítása
-
-### 1. Terminál
-
-A projekt gyökerében:
-
-```bash
-python manage.py runserver
-```
-
-Debug mód nélkül:
-
-```bash
-python manage.py runserver --insecure
-```
-
-### 2. Terminál
-
-A Tailwind mappában:
-
-```bash
-cd templates/tailwind
-npm run tailwind
-```
-
-## CSS minifikálása
-
-Nagyobb módosítások után:
-
-```bash
-cd templates/tailwind
-npm run minify
-```
-
-Ez frissíti a:
+### Alapértelmezett admin
 
 ```text
-static/style.min.css
+Username: admin
+Password: root_p_ssW0rd
 ```
 
-fájlt.
-
-## Használt technológiák
+## Technológiák
 
 * Python
 * Django
+* PostgreSQL
+* Redis
+* Celery
+* Flower
 * Tailwind CSS
-* PostCSS
-* Alpine.js
-* django-browser-reload
+* django-allauth

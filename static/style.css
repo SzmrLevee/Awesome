@@ -1957,6 +1957,113 @@ h2 {
   font-weight: 600;
 }
 
+.account-page .form-errors {
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(254 202 202);
+  background: rgb(254 242 242);
+  padding: 0.875rem 1rem;
+  color: rgb(153 27 27);
+}
+
+.account-page .form-errors .errorlist,
+.account-page .field-errors .errorlist {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.account-page .signup-field,
+.account-page .login-field {
+  margin-bottom: 1rem;
+}
+
+.account-page .signup-form-wrap {
+  margin-top: 2rem;
+}
+
+.account-page .login-form-wrap {
+  margin-top: 1.75rem;
+}
+
+.account-page .signup-intro {
+  margin-bottom: 1.25rem;
+}
+
+.account-page .signup-field label,
+.account-page .login-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.account-page .signup-field input:not([type="checkbox"]),
+.account-page .login-field input:not([type="checkbox"]) {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(203 213 225);
+  background: rgb(239 246 255);
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.account-page .signup-field input:not([type="checkbox"]):focus,
+.account-page .login-field input:not([type="checkbox"]):focus {
+  border-color: rgb(99 102 241);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 0.15);
+  background: white;
+}
+
+.account-page .field-errors {
+  margin-top: 0.6rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(254 202 202);
+  background: rgb(255 247 247);
+  padding: 0.75rem 0.9rem;
+  color: rgb(153 27 27);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.account-page .field-errors .errorlist li {
+  margin: 0.2rem 0;
+}
+
+.account-page .field-errors-password {
+  background: rgb(255 251 235);
+  border-color: rgb(253 230 138);
+  color: rgb(146 64 14);
+}
+
+.account-page .login-remember {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.account-page .login-remember input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: rgb(99 102 241);
+}
+
+.account-page .login-field-errors {
+  margin-top: 0.6rem;
+}
+
+.account-page .signup-actions {
+  margin-top: 0.5rem;
+}
+
+.account-page .login-form-errors {
+  margin-bottom: 1rem;
+}
+
+.account-page .login-actions {
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 640px) {
   .create-post-card {
     padding: 1.25rem;

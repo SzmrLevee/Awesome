@@ -1,0 +1,9 @@
+.env
+a_core/.env
+.venv/
+venv/
+media/
+__pycache__/
+.DS_Store
+node_modules/
+.git/

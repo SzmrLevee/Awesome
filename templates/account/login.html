@@ -18,20 +18,52 @@
         {% element p %}
             {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
         {% endelement %}
-        {% url 'account_login' as login_url %}
-        {% element form form=form method="post" action=login_url tags="entrance,login" %}
-            {% slot body %}
-                {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
-                {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button type="submit" tags="prominent,login" %}
-                    {% trans "Sign In" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
+        <div class="login-form-wrap">
+            {% url 'account_login' as login_url %}
+            {% element form form=form method="post" action=login_url tags="entrance,login" %}
+                {% slot body %}
+                    {% csrf_token %}
+                    <div class="login-field">
+                        {{ form.login.label_tag }}
+                        {{ form.login }}
+                        {% if form.login.errors %}
+                            <div class="field-errors login-field-errors">
+                                {{ form.login.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="login-field">
+                        {{ form.password.label_tag }}
+                        {{ form.password }}
+                        {% if form.password.errors %}
+                            <div class="field-errors login-field-errors">
+                                {{ form.password.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="login-remember">
+                        {{ form.remember }}
+                        {{ form.remember.label_tag }}
+                    </div>
+
+                    {% if form.non_field_errors %}
+                        <div class="form-errors form-errors-global login-form-errors">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+                    {{ redirect_field }}
+                {% endslot %}
+                {% slot actions %}
+                    <div class="login-actions">
+                        {% element button type="submit" tags="prominent,login" %}
+                            {% trans "Sign In" %}
+                        {% endelement %}
+                    </div>
+                {% endslot %}
+            {% endelement %}
+        </div>
     {% endif %}
     {% if LOGIN_BY_CODE_ENABLED or PASSKEY_LOGIN_ENABLED %}
         {% element hr %}
