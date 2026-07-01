@@ -36,13 +36,13 @@
                 >
                     <ul class="hoverlist [&>li>a]:justify-end">
                         <li><a href="">My profile</a></li>
-                        <li><a href="">Log out</a></li>
+                        <li><a href="{% url 'account_logout' %}">Log out</a></li>
                     </ul>
                 </div>
             </li>
             {% else %}
-            <li><a href="">Log In</a></li>
-            <li><a href="">Sign up</a></li>
+            <li><a href="{% url 'account_login' %}">Log In</a></li>
+            <li><a href="{% url 'account_signup' %}">Sign up</a></li>
             {% endif %}
         </ul>
     </nav>

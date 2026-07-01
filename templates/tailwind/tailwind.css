@@ -239,6 +239,116 @@ h2 {
   margin-top: 1.5rem;
 }
 
+.account-page content {
+  max-width: 32rem;
+  border-radius: 0.75rem;
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.account-page content h1 {
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+.account-page content p {
+  margin-bottom: 1rem;
+  color: rgb(55 65 81);
+}
+
+.account-page content a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.account-page content form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.account-page content form p > span {
+  display: none;
+}
+
+.account-page content form label {
+  font-weight: 600;
+  color: rgb(31 41 55);
+}
+
+.account-page content form p:has(input[type="checkbox"]),
+.account-page content form p:has(input[type="radio"]) {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.account-page content form input[type="checkbox"],
+.account-page content form input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.account-page content form p:has(input[type="checkbox"]) label,
+.account-page content form p:has(input[type="radio"]) label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.account-page content form input:not([type="checkbox"]):not([type="radio"]),
+.account-page content form textarea,
+.account-page content form select {
+  width: 100%;
+  border: 1px solid rgb(209 213 219);
+  border-radius: 0.5rem;
+  background-color: rgb(239 246 255);
+  padding: 0.75rem 1rem;
+  color: rgb(31 41 55);
+}
+
+.account-page content form input:focus,
+.account-page content form textarea:focus,
+.account-page content form select:focus {
+  border-color: var(--primary);
+  outline: 2px solid rgba(88, 40, 244, 0.2);
+  outline-offset: 1px;
+}
+
+.account-page content form button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  padding: 0 1rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.account-page content form button:hover {
+  background-color: var(--primary-hover);
+}
+
+.account-page content form button:active {
+  transform: scale(0.97);
+}
+
+.account-page .errorlist {
+  margin-bottom: 0.5rem;
+  color: rgb(185 28 28);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 @media (max-width: 640px) {
   .create-post-card {
     padding: 1.25rem;
@@ -247,5 +357,11 @@ h2 {
   .create-post-form .form-row {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .account-page content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
   }
 }
