@@ -10,3 +10,4 @@ psycopg[binary]>=3.2.0
 beautifulsoup4>=4.12.3
 requests>=2.32.3
 Pillow==12.3.0
+django-cleanup>=9.0.0

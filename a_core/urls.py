@@ -32,6 +32,7 @@ urlpatterns = [
     path('post/edit/<pk>/', post_edit_view, name='post-edit'),
     path('post/<pk>/', post_page_view, name='post'),
     path('profile/', profile_view, name='profile'),
+    path('profile/edit/', profile_edit_view, name='profile-edit'),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
 
