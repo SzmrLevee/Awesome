@@ -21,3 +21,11 @@ class Profile(models.Model):
         except:
             avatar = static('images/avatar_default.svg')
         return avatar
+
+    @property
+    def name(self):
+        if self.realname:
+            name = self.realname
+        else:
+            name = self.user.username
+        return name
