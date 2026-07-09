@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'a_posts',
+    'a_users',
     'django_browser_reload',
 ]
 
