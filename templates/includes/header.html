@@ -35,7 +35,7 @@
                 x-transition:enter-end="opacity-100 translate-y-0 scale-100"
                 >
                     <ul class="hoverlist [&>li>a]:justify-end">
-                        <li><a href="">My profile</a></li>
+                        <li><a href="{% url 'profile' %}">My profile</a></li>
                         <li><a href="{% url 'account_logout' %}">Log out</a></li>
                     </ul>
                 </div>

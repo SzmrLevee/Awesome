@@ -9,6 +9,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:postgres@postgres:5432/postgres
       REDIS_URL: redis://redis:6379/0
+    user: "1000:1000"
     env_file:
       - path: ./a_core/.env.example
         required: false
