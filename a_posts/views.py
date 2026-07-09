@@ -50,6 +50,8 @@ def post_create_view(request):
             find_artist = sourcecode.select('a.owner-name')
             artist = find_artist[0].text.strip()
             post.artist = artist
+
+            post.author = request.user
             
             post.save()
             form.save_m2m()
