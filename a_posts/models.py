@@ -40,4 +40,7 @@ class Comment(models.Model):
     id = models.CharField(max_length=100, default=uuid.uuid4, unique=True, primary_key=True, editable=False)
 
     def __str__(self):
-        return f'{self.author.username} : {self.body[:30]}'
+        try:
+            return f'{self.author.username} : {self.body[:30]}'
+        except:
+            return f'no author : {self.body[:30]}'
