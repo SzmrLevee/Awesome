@@ -5,7 +5,7 @@
 {% include 'a_posts/post.html' %}
 
 <div class="card !pb-0 -mt-3">
-    <form method="POST" class="post-comment-form" autocomplete="off">
+    <form method="POST" action="{% url 'comment-sent' post.id %}" class="post-comment-form" autocomplete="off">
         {% csrf_token %}
         {{ commentform }}
         <button class="button" type="submit">Submit</button>
