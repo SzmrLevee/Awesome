@@ -168,3 +168,5 @@ ACCOUNT_EMAIL_REQUIRED = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_USERNAME_BLACKLIST = [ 'admin', 'accounts', 'profile', 'category', 'post' ]
+
+ACCOUNT_ADAPTER = "a_core.adapters.AccountAdapter"
