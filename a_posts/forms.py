@@ -28,3 +28,14 @@ class PostEditForm(ModelForm):
             'body' : forms.Textarea(attrs={'rows': 3, 'class': 'post-edit-textarea font1 text-4xl rounded-lg'}),
             'tags' : forms.CheckboxSelectMultiple(attrs={'class': 'peer sr-only'}),
         }
+
+class CommentCreateForm(ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['body']
+        widgets = {
+            'body' : forms.TextInput(attrs={'placeholder' : 'Add comment ...'})
+        }
+        labels = {
+            'body' : ''
+        }
