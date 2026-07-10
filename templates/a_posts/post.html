@@ -42,7 +42,7 @@
     </div>
     <div class="flex items-center justify-between text-sm px-2">
       <a class="font-bold hover:underline" href="{% url 'post' post.id %}">
-        Comments<span class="font-light text-gray-500 ml-2">3</span>
+        Comments<span class="font-light text-gray-500 ml-2">{{ post.comments.count }}</span>
       </a>
       <div class="flex items-center gap-4 [&>a:hover]:underline">
         <div class="flex items-center gap-1">
