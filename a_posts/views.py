@@ -117,3 +117,14 @@ def comment_sent(request, pk):
             comment.parent_post = post
             comment.save()
     return redirect('post', post.id)
+
+@login_required
+def comment_delete_view(request, pk):
+    post = get_object_or_404(Comment, id=pk, author=request.user)
+
+    if request.method == "POST":
+        post.delete()
+        messages.success(request, 'Comment deleted')
+        return redirect('post', post.parent_post.id)
+
+    return render(request, 'a_posts/comment_delete.html', {'comment' : post})
