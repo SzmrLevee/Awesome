@@ -102,7 +102,7 @@ def post_page_view(request, pk):
 
     context = {
         'post' : post,
-        'commentform' : commentform
+        'commentform' : commentform,
         'replyform' : replyform
     }
 
