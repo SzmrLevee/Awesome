@@ -98,9 +98,12 @@ def post_page_view(request, pk):
 
     commentform = CommentCreateForm()
 
+    replyform = ReplyCreateForm()
+
     context = {
         'post' : post,
         'commentform' : commentform
+        'replyform' : replyform
     }
 
     return render(request, 'a_posts/post_page.html', context)
