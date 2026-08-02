@@ -38,6 +38,7 @@ urlpatterns = [
     path('profile/onboarding/', profile_edit_view, name='profile-onboarding'),
     path('commentsent/<pk>/', comment_sent, name='comment-sent'),
     path('comment/delete/<pk>/', comment_delete_view, name='comment-delete'),
+    path('reply_sent/<pk>/', reply_sent, name='reply_sent'),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
 
