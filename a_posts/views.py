@@ -131,3 +131,16 @@ def comment_delete_view(request, pk):
         return redirect('post', post.parent_post.id)
 
     return render(request, 'a_posts/comment_delete.html', {'comment' : post})
+
+@login_required
+def reply_sent(request, pk):
+    comment = get_object_or_404(Comment, id=pk)
+
+    if request.method == 'POST':
+        form = ReplyCreateForm(request.POST)
+        if form.is_valid:
+            reply = form.save(commit=False)
+            reply.author = request.user
+            reply.parent_comment = comment
+            reply.save()
+    return redirect('post', comment.parent_post.id)
